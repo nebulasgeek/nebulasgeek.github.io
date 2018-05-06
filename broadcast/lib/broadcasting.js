@@ -102,4 +102,21 @@ function broadcasting()
             "method": "neb_sendTransaction"
         }, "*");
 }
+function anonymousbroadcasting()
+{
+	var arguments =  "[\"" + document.getElementById('maintext').value + "\"]";
+        window.postMessage({
+            "target": "contentscript",
+            "data":{
+                "to" : dappaddress,
+                "value" : "0",
+                "contract" : {
+                    "function" : "anonymousbroadcasting",
+                    "args" : arguments
+                }
+            },
+            "method": "neb_sendTransaction"
+        }, "*");
+}
+
 setTimeout(function(){getlastbroadcasting("星云广播");},1000);
