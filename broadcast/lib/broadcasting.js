@@ -4,9 +4,9 @@ var Account = require("nebulas").Account;
 var Transaction = require("nebulas").Transaction;
 var Unit = require("nebulas").Unit;
 var myneb = new Neb();
-myneb.setRequest(new HttpRequest("https://testnet.nebulas.io"));
+myneb.setRequest(new HttpRequest("https://mainnet.nebulas.io"));
 var account, tx, txhash;
-var dappaddress="n1vxvry3hdotBoZtT2tTunpaZqT4xCNUdXo";
+var dappaddress="n1rp1eCMHKRHXyWtDHP6i3U3z1asCmU8kQV";
 function createResultDiv(titleText)	//创建结果区
 {
 	var maindiv=document.getElementById("main");	//获取主块
@@ -102,4 +102,4 @@ function broadcasting()
             "method": "neb_sendTransaction"
         }, "*");
 }
-setTimeout(function(){getlastbroadcasting("test");},1000);
+setTimeout(function(){getlastbroadcasting("星云广播");},1000);
