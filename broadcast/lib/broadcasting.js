@@ -35,7 +35,7 @@ function addNewResult(result,resultNumber=0,resultBoxRows=10)	//添加监听结�
 	newresult.setAttribute("class","resultBox");
 	newresult.setAttribute("rows",resultBoxRows);
 	
-	var node=document.createTextNode("点击复制以下内容");
+	//var node=document.createTextNode("点击复制以下内容");
 	copyButton.appendChild(node);
 	copyButton.setAttribute("data-clipboard-target","#resultBox"+resultNumber);
 	copyButton.setAttribute("class","btn");
