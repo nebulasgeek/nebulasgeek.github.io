@@ -19,7 +19,7 @@ function createResultDiv(titleText)	//创建结果区
 	resultDiv.setAttribute("id","resultarea");
 	maindiv.appendChild(resultDiv);				//追加到主块
 	resultTitle=document.createElement("h1");
-	var node=document.createTextNode(titleText+"的最新广播");
+	var node=document.createTextNode(titleText+" 频道上的最新广播");
 	resultTitle.appendChild(node);
 	resultDiv.appendChild(resultTitle);
 }
@@ -46,15 +46,17 @@ function addNewResult(result,resultNumber=0,resultBoxRows=10)	//添加监听结�
 }
 function getlastbroadcasting(username)
 {
-	createResultDiv(username);
+	
 	var dapp_address=dappaddress;
 	var dapp_function="getlastbroadcasting";
 	if(username)
 	{
 		var dapp_arguments=username;
+		createResultDiv(username);
 	}
 	else{
 		var dapp_arguments=document.getElementById('username').value;
+		createResultDiv(dapp_arguments);
 	}
 	myneb.api.call({
 					from:dapp_address,
