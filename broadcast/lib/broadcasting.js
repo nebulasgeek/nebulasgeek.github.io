@@ -97,7 +97,7 @@ function broadcasting()
                 "to" : dappaddress,
                 "value" : "0",
                 "contract" : {
-                    "function" : "register",
+                    "function" : "broadcasting",
                     "args" : arguments
                 }
             },
